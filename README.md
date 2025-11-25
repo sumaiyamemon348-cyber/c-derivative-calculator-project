@@ -2,6 +2,7 @@
 using namespace std;
 
 // Function prototypes
+
 void derivativePolynomial();
 void derivativeSin();
 void derivativeCos();
@@ -14,10 +15,12 @@ void derivativeExp();
 void derivativeLn();
 void derivativeOneOverX();
 
-int main() {
+int main()
+{
     int choice;
 
-    for (int attempt = 1; attempt <= 12; attempt++) {
+    for (int attempt = 1; attempt <= 12; attempt++) 
+    {
         cout << "\n========== DERIVATIVE CALCULATOR ==========\n";
         cout << "Attempt: " << attempt << " of 12\n";
         cout << "*****1. Polynomial (ax^2, bx, or c)*****\n";
@@ -35,7 +38,8 @@ int main() {
         cout << "===>Enter choice:<=== ";
         cin >> choice;
 
-        switch (choice) {
+        switch (choice)
+        {
             case 1: derivativePolynomial();
  break;
             case 2: derivativeSin(); 
@@ -75,7 +79,10 @@ break;
 // ===== Function Definitions =====
 
 // Polynomial derivative based on type
-void derivativePolynomial() {
+
+
+void derivativePolynomial()
+{
     int type;
     double coeff;
 
@@ -83,7 +90,8 @@ void derivativePolynomial() {
     cout << "===>1. ax^2\n2. bx\n3. constant<===\nEnter type: ";
     cin >> type;
 
-    if (type >= 1 && type <= 3) {
+    if (type >= 1 && type <= 3) 
+    {
         cout << "***Enter coefficient:*** ";
         cin >> coeff;
 
@@ -92,21 +100,46 @@ void derivativePolynomial() {
         else if (type == 2) cout << coeff;
         else if (type == 3) cout << "0";
         cout << endl;
-    } else {
+    }
+    else
+    {
         cout << "===>Invalid type!<===\n";
     }
 }
 
 // Trigonometric derivatives
-void derivativeSin() { cout << "\n===>Derivative: cos(x)<===\n"; }
-void derivativeCos() { cout << "\n===>Derivative: -sin(x)<===\n"; }
-void derivativeTan() { cout << "\n===>Derivative: sec^2(x)<===\n"; }
-void derivativeSec() { cout << "\n===>Derivative: sec(x)*tan(x)<===\n"; }
-void derivativeCsc() { cout << "\n===>Derivative: -csc(x)*cot(x)<===\n"; }
-void derivativeCot() { cout << "\n===>Derivative: -csc^2(x)<===\n"; }
+
+
+void derivativeSin()
+{
+cout << "\n===>Derivative: cos(x)<===\n"; 
+}
+void derivativeCos() 
+{
+cout << "\n===>Derivative: -sin(x)<===\n";
+}
+void derivativeTan()
+{
+cout << "\n===>Derivative: sec^2(x)<===\n"; 
+}
+void derivativeSec()
+{
+cout << "\n===>Derivative: sec(x)*tan(x)<===\n";
+}
+void derivativeCsc()
+{
+cout << "\n===>Derivative: -csc(x)*cot(x)<===\n"; 
+}
+void derivativeCot() 
+{
+cout << "\n===>Derivative: -csc^2(x)<===\n";
+}
 
 // Power rule x^n => n*x^(n-1)
-void derivativePower() {
+
+
+void derivativePower() 
+{
     float n;
     cout << "\n ==>Enter power n (for x^n)<==: ";
     cin >> n;
@@ -114,10 +147,20 @@ void derivativePower() {
 }
 
 // Exponential
-void derivativeExp() { cout << "\n==>Derivative: e^x\n"; }
+
+
+void derivativeExp()
+{
+cout << "\n==>Derivative: e^x\n";
+}
 
 // Natural logarithm
-void derivativeLn() { cout << "\n==>Derivative: 1/x\n"; }
+
+
+void derivativeLn()
+{
+cout << "\n==>Derivative: 1/x\n"; 
+}
 
 // 1/x
 void derivativeOneOverX() { cout << "\n==>Derivative: -1/x^2\n";
